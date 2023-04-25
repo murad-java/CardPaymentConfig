@@ -1,0 +1,32 @@
+
+spring:
+  datasource:
+     url: jdbc:postgresql://localhost:5432/card
+     username: postgres
+     password: 123
+  jpa:
+     hibernate:
+       ddl-auto: update
+     show-sql: true
+  output:
+     ansi:
+       enabled: always
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+      
+logging:
+  file: 
+    path: /home/card_payment/log/
+    name: ${spring.application.name}-${LOGGING_DATE}.log
+  level:
+    root: debug
+    org.springframework.security: debug
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"
+  file-name: myapp.log
+  max-history: 70
+  max-size: 10MB
