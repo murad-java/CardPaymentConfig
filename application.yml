@@ -20,7 +20,7 @@ eureka:
 logging:
   file: 
     path: /home/card_payment/log/
-    name: ${spring.application.name}-${LOGGING_DATE}.log
+    name: ${spring.application.name}-${localdate}.log
   level:
     root: debug
     org.springframework.security: debug
