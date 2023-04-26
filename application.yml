@@ -20,10 +20,10 @@ eureka:
 logging:
   file:
     path: /home/card_payment/log/
-    name: ${spring.application.name}-${date:yyy-MM-dd}.log
+    name: ${spring.application.name}-%d{yyyy-MM-dd}.log
   level:
     root: error
-    com.murad.epointservice: error
+    com.murad.epointservice: debug
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
