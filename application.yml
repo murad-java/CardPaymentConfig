@@ -18,12 +18,12 @@ eureka:
       defaultZone: http://localhost:8001/eureka
       
 logging:
-  file: 
+  file:
     path: /home/card_payment/log/
-    name: ${spring.application.name}-${date:yyyyMMdd}.log
+    name: ${spring.application.name}-${date:yyy-MM-dd}.log
   level:
-    root: debug
-    org.springframework.security: debug
+    root: error
+    com.murad.epointservice: debug
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"
